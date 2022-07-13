@@ -26,7 +26,7 @@ function ClientCapitalDistributions() {
   return (
     <Card>
       <H4 className="mb-4">
-        Client capital distributions
+        Recent client capital distributions
       </H4>
       <div className="space-y-6">
         {distributions.map(dist => <Distribution key={dist.name} {...dist} />)}
