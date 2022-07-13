@@ -35,32 +35,32 @@ function Title({ as, size = "h2", className = "font-medium", ...rest }: Props) {
   )
 }
 
-function HX({as, children, ...props}: Props) {
-  return <Title as={as} {...props} children={children} size="none" />
+function HX({as, ...props}: Props) {
+  return <Title as={as} {...props} size="none" />
 }
 
-function H1({children, ...props}: Props) {
-  return <Title {...props} children={children} size="h1" />
+function H1(props: Props) {
+  return <Title {...props} size="h1" />
 }
 
-function H2({children, ...props}: Props) {
-  return <Title {...props} children={children} size="h2" />
+function H2(props: Props) {
+  return <Title {...props} size="h2" />
 }
 
-function H3({children, ...props}: Props) {
-  return <Title {...props} children={children} size="h3" />
+function H3(props: Props) {
+  return <Title {...props} size="h3" />
 }
 
-function H4({children, ...props}: Props) {
-  return <Title {...props} children={children} size="h4" />
+function H4(props: Props) {
+  return <Title {...props} size="h4" />
 }
 
-function H5({children, ...props}: Props) {
-  return <Title {...props} children={children} size="h5" />
+function H5(props: Props) {
+  return <Title {...props} size="h5" />
 }
 
-function H6({children, ...props}: Props) {
-  return <Title {...props} children={children} size="h6" />
+function H6(props: Props) {
+  return <Title {...props} size="h6" />
 }
 
 interface ParagraphProps {
