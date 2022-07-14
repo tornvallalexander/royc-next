@@ -7,11 +7,11 @@ import { H5 } from "components/typography";
 import { trpc } from "utils/trpc";
 
 function Ongoing() {
-  const res = trpc.useQuery(["royc-ongoing"]);
+  const res = trpc.useQuery(["dashboard.ongoing"]);
   return (
     <Card>
       <H5 className="text-green-900 font-medium mb-3">Ongoing</H5>
-      {res?.data?.ongoing.map((fund, i) => (
+      {res?.data?.ongoing?.map((fund, i) => (
         <FundOverview key={fund.name} fund={fund} index={i}>
           <div className="space-y-1">
             <LabeledValue label="Total fund">

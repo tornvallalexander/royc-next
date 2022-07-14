@@ -5,7 +5,7 @@ import { Card } from "components/card";
 import { trpc } from "utils/trpc";
 
 function FourMetrics() {
-  const res = trpc.useQuery(["royc-four-metrics"]);
+  const res = trpc.useQuery(["dashboard.four-metrics"]);
   return (
     <div className="grid grid-cols-2 gap-6">
       {res?.data?.metrics?.map(({ name, value }) => {
