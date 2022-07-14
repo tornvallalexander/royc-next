@@ -24,7 +24,7 @@ function FundOverview({ fund, index, children }: Props) {
       }
     )}>
       <div className="flex justify-between">
-        <div className="hidden lg:inline-block">
+        <div className="hidden lg:inline-block shrink-0">
           <Image
             src={img || "https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Advent_International_logo.svg/1200px-Advent_International_logo.svg.png"}
             width={140}
@@ -32,7 +32,7 @@ function FundOverview({ fund, index, children }: Props) {
             alt=""
           />
         </div>
-        <div className="ml-3">
+        <div className="ml-3 mr-6 lg:mr-12">
           <H6 className="text-gray-700">
             {name}
           </H6>
@@ -42,7 +42,9 @@ function FundOverview({ fund, index, children }: Props) {
           </p>
         </div>
       </div>
-      {children}
+      <div className="shrink-0">
+        {children}
+      </div>
     </div>
   )
 }
