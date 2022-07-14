@@ -1,12 +1,9 @@
 import React, { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react"
-import {
-  MenuAlt2Icon,
-  XIcon,
-} from "@heroicons/react/outline"
+import { MenuAlt2Icon, XIcon } from "@heroicons/react/outline"
 import { getPositionedLinks } from "utils/misc";
 import { MenuIconLink } from "components/menu-icon-link";
-import { SearchBar } from 'components/search-bar';
+import { SearchBar } from "components/search-bar";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = useState(false)

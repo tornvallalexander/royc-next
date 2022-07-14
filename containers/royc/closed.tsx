@@ -13,21 +13,21 @@ const closed: Fund[] = [
     type: "Growth Equity",
     total_fund: 250000000,
     unallocated: 44600000,
-    img: "https://via.placeholder.com/150",
+    img: "",
   },
   {
     name: "Brookfield Strategic Real Estate Partners VI",
     type: "Real Estate private Equity",
     total_fund: 200000000,
     unallocated: 44600000,
-    img: "https://via.placeholder.com/150",
+    img: "",
   },
   {
     name: "Advent International",
     type: "Private Equity",
     total_fund: 200000000,
     unallocated: 44600000,
-    img: "https://via.placeholder.com/150",
+    img: "",
   },
 ]
 
