@@ -49,3 +49,61 @@ export const dashboardRouter = createRouter()
       };
     }
   })
+  .query("upcoming", {
+    async resolve() {
+      return {
+        upcoming: [
+          {
+            name: "Insight Partners XII",
+            type: "Growth Equity",
+            total_fund: 250000000,
+            unallocated: 44600000,
+            img: "https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Advent_International_logo.svg/1200px-Advent_International_logo.svg.png",
+          },
+          {
+            name: "Brookfield Strategic Real Estate Partners VI",
+            type: "Real Estate private Equity",
+            total_fund: 200000000,
+            unallocated: 44600000,
+            img: "https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Advent_International_logo.svg/1200px-Advent_International_logo.svg.png",
+          },
+          {
+            name: "Advent International",
+            type: "Private Equity",
+            total_fund: 200000000,
+            unallocated: 44600000,
+            img: "https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Advent_International_logo.svg/1200px-Advent_International_logo.svg.png",
+          },
+        ]
+      }
+    }
+  })
+  .query("closed", {
+    async resolve() {
+      return {
+        closed: [
+          {
+            name: "Insight Partners XII",
+            type: "Growth Equity",
+            total_fund: 250000000,
+            unallocated: 44600000,
+            img: "",
+          },
+          {
+            name: "Brookfield Strategic Real Estate Partners VI",
+            type: "Real Estate private Equity",
+            total_fund: 200000000,
+            unallocated: 44600000,
+            img: "",
+          },
+          {
+            name: "Advent International",
+            type: "Private Equity",
+            total_fund: 200000000,
+            unallocated: 44600000,
+            img: "",
+          },
+        ]
+      }
+    }
+  })
