@@ -12,6 +12,7 @@ type Props = {
 const textVariants = {
   primary: "text-gray-800",
   secondary: "text-gray-500",
+  green: "text-green-900",
 }
 
 const sizes = {
@@ -64,7 +65,7 @@ function H6(props: Props) {
 }
 
 interface ParagraphProps {
-  variant?: "primary" | "secondary";
+  variant?: keyof typeof textVariants;
   className?: string;
   prose?: boolean;
   as?: React.ElementType;

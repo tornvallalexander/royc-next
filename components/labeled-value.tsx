@@ -25,11 +25,12 @@ function LabeledValue(props: Props) {
       "flex-col-reverse": reverse,
     })}>
       <Text
-        className={clsx("text-green-900 font-medium", {
+        className={clsx("font-medium", {
           "text-lg": size === "md",
           "text-2xl": size === "lg",
           "text-4xl font-bold": size === "xl",
         })}
+        variant="green"
       >
         {children}
       </Text>
