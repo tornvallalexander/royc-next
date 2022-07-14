@@ -7,10 +7,10 @@ type Props = {
   shadow?: "sm" | "md" | "lg" | "xl" | "2xl" | "3xl";
 }
 
-function Card({ children, className, shadow = "md" }: Props) {
+function Card({ children, className, shadow = "lg" }: Props) {
   return (
     <div className={clsx(
-        "bg-white rounded-xl p-4 min-w-full shadow-md", // need to add this since we are not using the shadow prop anywhere else
+        "bg-white rounded-xl p-4 min-w-full",
         `shadow-${shadow}`,
         className,
       )}>

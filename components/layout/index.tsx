@@ -4,9 +4,9 @@ import {
   MenuAlt2Icon,
   XIcon,
 } from "@heroicons/react/outline"
-import { SearchIcon } from "@heroicons/react/solid"
 import { getPositionedLinks } from "utils/misc";
 import { MenuIconLink } from "components/menu-icon-link";
+import { SearchBar } from 'components/search-bar';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -109,27 +109,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <span className="sr-only">Open sidebar</span>
               <MenuAlt2Icon className="h-6 w-6" aria-hidden="true" />
             </button>
-            <div className="w-full px-4 flex justify-between">
+            <div className="w-full px-4 flex justify-between items-center">
               <p className="text-4xl font-bold my-auto">
                 ROYC
               </p>
-              <div className="flex-1 flex">
+              <div className="flex">
                 <form className="flex md:ml-0" action="#" method="GET">
-                  <label htmlFor="search-field" className="sr-only">
-                    Search
-                  </label>
-                  <div className="relative w-full text-gray-400 focus-within:text-gray-600">
-                    <div className="absolute inset-y-0 left-0 flex items-center pointer-events-none">
-                      <SearchIcon className="h-5 w-5" aria-hidden="true" />
-                    </div>
-                    <input
-                      id="search-field"
-                      className="block w-full h-full pl-8 pr-3 py-2 border-transparent text-gray-900 placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-0 focus:border-transparent sm:text-sm"
-                      placeholder="Search"
-                      type="search"
-                      name="search"
-                    />
-                  </div>
+                  <SearchBar />
                 </form>
               </div>
             </div>
