@@ -19,7 +19,7 @@ function ClientCapitalDistributions() {
   )
 }
 
-function Distribution<T>({ name, value, total }: MetricTotal) {
+function Distribution({ name, value, total }: MetricTotal) {
   return (
     <div className="flex justify-between items-center space-x-4">
       <Text className="rotate-90 shrink-0" variant="secondary">{name}</Text>
