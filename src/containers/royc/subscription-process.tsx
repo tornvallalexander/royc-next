@@ -5,6 +5,7 @@ import { H4 } from "components/typography";
 import type { Metric } from "utils/types";
 import { ThemeIcon } from "@mantine/core";
 import { UserIcon } from "@heroicons/react/outline";
+import { separateThousands } from "utils/misc";
 
 const subscriptions: Metric[] = [
   {
@@ -17,7 +18,7 @@ const subscriptions: Metric[] = [
   },
   {
     name: "Indicated commitments",
-    value: 2040203029,
+    value: 204020309,
   },
 ];
 
@@ -45,7 +46,7 @@ function Subscription({ name, value }: Metric) {
         size="md"
         reverse
       >
-        {value}
+        {separateThousands(value)}
       </LabeledValue>
     </div>
   )

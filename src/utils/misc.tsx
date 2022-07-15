@@ -18,7 +18,13 @@ function currencyFormatter(val: number, accuracy = 1) {
         : Math.abs(Number(val));
 }
 
+function separateThousands(num: number) {
+  // courtesy of GitHub Copilot ;)
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 export {
   getPositionedLinks,
   currencyFormatter,
+  separateThousands,
 }
