@@ -1,13 +1,13 @@
-import type { NextPage } from 'next'
-import Layout from 'components/layout';
-import { H3 } from 'components/typography';
-import { Upcoming } from 'containers/royc/upcoming';
-import { ClientCapitalDistributions } from 'containers/royc/client-capital-distributions';
-import { PercentageMetrics } from 'containers/royc/percentage-metrics';
-import { FourMetrics } from 'containers/royc/four-metrics';
-import { Closed } from 'containers/royc/closed';
-import { Ongoing } from 'containers/royc/ongoing';
-import { SubscriptionProcess } from 'containers/royc/subscription-process';
+import type { NextPage } from "next"
+import Layout from "components/layout";
+import { H3 } from "components/typography";
+import { Upcoming } from "containers/royc/upcoming";
+import { ClientCapitalDistributions } from "containers/royc/client-capital-distributions";
+import { PercentageMetrics } from "containers/royc/percentage-metrics";
+import { FourMetrics } from "containers/royc/four-metrics";
+import { Closed } from "containers/royc/closed";
+import { Ongoing } from "containers/royc/ongoing";
+import { SubscriptionProcess } from "containers/royc/subscription-process";
 
 const Home: NextPage = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import type { PercentageMetric } from "utils/types";
-import { Card } from "components/card";
+import { Card } from "components/card"
 import { LabeledValue } from "components/labeled-value";
 import { H4 } from "components/typography";
 import { StyledRingProgress } from "components/styled-ring-progress";

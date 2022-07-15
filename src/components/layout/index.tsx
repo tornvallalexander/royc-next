@@ -111,7 +111,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 ROYC
               </p>
               <div className="flex">
-                <form className="flex md:ml-0" action="#" method="GET">
+                <form className="flex md:ml-0" action="src/components/layout/index#" method="GET">
                   <SearchBar />
                 </form>
               </div>

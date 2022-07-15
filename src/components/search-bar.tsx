@@ -1,6 +1,6 @@
 import React from "react";
 import { SearchIcon } from "@heroicons/react/outline";
-import { TextInput } from '@mantine/core';
+import { TextInput } from "@mantine/core";
 
 function SearchBar() {
   return (

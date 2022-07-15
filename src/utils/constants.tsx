@@ -48,14 +48,14 @@ const menuLinks: MenuLink[] = [
   },
 ]
 
-const ROUTES = {
-  HOME: "/",
-  ROYC: "/royc",
-  ROYC_STATISTICS: "/royc/statistics",
-  ROYC_ANALYTICS: "/royc/analytics",
-  ROYC_GROUPS: "/royc/groups",
-  ROYC_SETTINGS: "/royc/settings",
-  ROYC_CHARTS: "/royc/charts",
+enum ROUTES {
+  HOME = "/",
+  ROYC = "/royc",
+  ROYC_STATISTICS = "/royc/statistics",
+  ROYC_ANALYTICS = "/royc/analytics",
+  ROYC_GROUPS = "/royc/groups",
+  ROYC_SETTINGS = "/royc/settings",
+  ROYC_CHARTS = "/royc/charts",
 }
 
 export {

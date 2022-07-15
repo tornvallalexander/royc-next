@@ -1,7 +1,7 @@
 import React from "react";
 import { LabeledValue } from "components/labeled-value";
-import { currencyFormatter } from "utils/misc";
 import { Card } from "components/card";
+import { currencyFormatter } from "utils/misc";
 import { trpc } from "utils/trpc";
 
 function FourMetrics() {
@@ -14,7 +14,6 @@ function FourMetrics() {
             <LabeledValue
               label={name}
               size="xl"
-              position="left"
               reverse
             >
               {currencyFormatter(value, 0)}

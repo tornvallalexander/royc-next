@@ -1,8 +1,8 @@
 import React from "react"
 import clsx from "clsx";
 import type { MenuLink } from "utils/types";
-import Link from 'next/link';
-import { useLocation } from 'react-use';
+import Link from "next/link";
+import { useLocation } from "react-use";
 
 type Props = MenuLink;
 

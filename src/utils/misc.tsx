@@ -1,5 +1,5 @@
-import { menuLinks } from "utils/constants";
-import type { MenuLink } from "utils/types";
+import { menuLinks } from "src/utils/constants";
+import type { MenuLink } from "src/utils/types";
 
 function getPositionedLinks() {
   const { topMenuLinks, bottomMenuLinks } = menuLinks.reduce((acc, link) => {

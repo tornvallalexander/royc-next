@@ -1,10 +1,10 @@
 import React from "react";
-import type { Metric } from "utils/types";
-import { ThemeIcon } from "@mantine/core";
-import { UserIcon } from "@heroicons/react/outline";
 import { LabeledValue } from "components/labeled-value";
 import { Card } from "components/card";
 import { H4 } from "components/typography";
+import type { Metric } from "utils/types";
+import { ThemeIcon } from "@mantine/core";
+import { UserIcon } from "@heroicons/react/outline";
 
 const subscriptions: Metric[] = [
   {

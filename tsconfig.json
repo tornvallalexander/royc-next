@@ -17,11 +17,11 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "components/*": ["components/*"],
-      "containers/*": ["containers/*"],
-      "utils/*": ["utils/*"],
-      "hooks/*": ["hooks/*"],
-      "constants/*": ["constants/*"],
+      "components/*": ["src/components/*"],
+      "containers/*": ["src/containers/*"],
+      "utils/*": ["src/utils/*"],
+      "hooks/*": ["src/hooks/*"],
+      "constants/*": ["src/constants/*"],
       "server/*": ["server/*"]
     },
   },

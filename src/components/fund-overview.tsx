@@ -2,15 +2,16 @@ import React from "react";
 import clsx from "clsx";
 import { H6, Text } from "components/typography";
 import type { Fund } from "utils/types";
-import Image from 'next/image';
+import Image from "next/image";
 
 type Props = {
   fund: Fund;
   index: number;
   children: React.ReactNode;
+  justify?: "top" | "center" | "bottom";
 }
 
-function FundOverview({ fund, index, children }: Props) {
+function FundOverview({ fund, index, children, justify = "top" }: Props) {
   const {
     name,
     type,
@@ -42,7 +43,9 @@ function FundOverview({ fund, index, children }: Props) {
           </p>
         </div>
       </div>
-      <div className="shrink-0">
+      <div className={clsx(
+        "shrink-0 flex flex-col", `justify-${justify}`
+      )}>
         {children}
       </div>
     </div>
