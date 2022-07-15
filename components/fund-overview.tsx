@@ -32,7 +32,7 @@ function FundOverview({ fund, index, children }: Props) {
             alt=""
           />
         </div>
-        <div className="ml-3 mr-6 lg:mr-12">
+        <div className="lg:ml-3 mr-6 lg:mr-12">
           <H6 className="text-gray-700">
             {name}
           </H6>

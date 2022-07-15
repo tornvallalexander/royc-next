@@ -21,15 +21,15 @@ const percentageMetrics: PercentageMetric[] = [
     }
   },
   {
-    name: "Unfunded capital calls",
+    name: "Client target allocations committed",
     percentage: 0.14,
     first: {
-      name: "Clients",
+      name: "Client with target",
       value: 43,
       total: 61,
     },
     second: {
-      name: "Funds",
+      name: "Unallocated capital",
       value: 43,
       total: 61,
     }
@@ -48,18 +48,20 @@ function PercentageMetrics() {
         } = metric;
 
         return (
-          <Card key={name}>
+          <Card className="flex flex-col" key={name}>
             <H4>
               {name}
             </H4>
-            <StyledRingProgress progress={+(percentage * 100).toFixed(0)} />
-            <div className="flex justify-between">
-              <LabeledValue label={first.name} position="left" size="lg">
-                {first.value}/{first.total}
-              </LabeledValue>
-              <LabeledValue label={second.name} size="lg">
-                {second.value}
-              </LabeledValue>
+            <div className="lg:mt-auto">
+              <StyledRingProgress progress={+(percentage * 100).toFixed(0)} />
+              <div className="flex justify-between">
+                <LabeledValue label={first.name} position="left" size="lg">
+                  {first.value}/{first.total}
+                </LabeledValue>
+                <LabeledValue label={second.name} size="lg">
+                  {second.value}
+                </LabeledValue>
+              </div>
             </div>
           </Card>
         )

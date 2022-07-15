@@ -5,7 +5,7 @@ import clsx from "clsx";
 type Props = {
   label: string;
   children: React.ReactNode;
-  position?: "left" | "right" | "center";
+  position?: "end" | "start" | "center";
   reverse?: boolean;
   size?: "sm" | "md" | "lg" | "xl";
 }
@@ -14,13 +14,13 @@ function LabeledValue(props: Props) {
   const {
     label,
     children,
-    position = "right",
+    position = "start",
     reverse = false,
     size = "sm",
   } = props;
 
   return (
-    <div className={clsx("flex", `text-${position}`, {
+    <div className={clsx("flex", `items-${position}`, {
       "flex-col": !reverse,
       "flex-col-reverse": reverse,
     })}>

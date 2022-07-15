@@ -14,10 +14,10 @@ function Ongoing() {
       {res?.data?.ongoing?.map((fund, i) => (
         <FundOverview key={fund.name} fund={fund} index={i}>
           <div className="space-y-1">
-            <LabeledValue label="Total fund">
+            <LabeledValue label="Total fund" position="end">
               {currencyFormatter(fund.total_fund)}
             </LabeledValue>
-            <LabeledValue label="Unallocated">
+            <LabeledValue label="Unallocated" position="end">
               {currencyFormatter(fund.unallocated)}
             </LabeledValue>
           </div>

@@ -23,7 +23,7 @@ function MenuIconLink(props: Props) {
     >
       <div
         className={clsx(
-          "group flex items-center md:justify-center px-2 py-2 font-medium rounded-md",
+          "cursor-pointer group flex items-center md:justify-center px-2 py-2 font-medium rounded-md",
           {
             "bg-gray-100 text-gray-900": isSelected,
             "text-gray-600 hover:bg-gray-50 hover:text-gray-900": !isSelected,
