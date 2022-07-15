@@ -129,13 +129,36 @@ export const dashboardRouter = createRouter()
         unfunded_capital_calls: {
           percentage: 0.59,
           clients: {
-            value: 43,
-            total: 61,
+            value: 71,
+            total: 183,
           },
           unfunded_capital: {
             value: 74000000,
           }
         },
+      }
+    }
+  })
+  .query("distributions", {
+    async resolve() {
+      return {
+        distributions: [
+          {
+            name: "3 M",
+            value: 35,
+            total: 70,
+          },
+          {
+            name: "6 M",
+            value: 50,
+            total: 70,
+          },
+          {
+            name: "9 M",
+            value: 65,
+            total: 70,
+          },
+        ]
       }
     }
   })
