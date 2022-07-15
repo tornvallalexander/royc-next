@@ -30,7 +30,7 @@ const percentageMetrics: PercentageMetric[] = [
     },
     second: {
       name: "Unallocated capital",
-      value: 43,
+      value: 9079000000,
       total: 61,
     }
   }
@@ -55,10 +55,10 @@ function PercentageMetrics() {
             <div className="lg:mt-auto">
               <StyledRingProgress progress={+(percentage * 100).toFixed(0)} />
               <div className="flex justify-between">
-                <LabeledValue label={first.name} position="left" size="lg">
+                <LabeledValue label={first.name} size="lg" reverse>
                   {first.value}/{first.total}
                 </LabeledValue>
-                <LabeledValue label={second.name} size="lg">
+                <LabeledValue label={second.name} size="lg" position="end" reverse>
                   {second.value}
                 </LabeledValue>
               </div>

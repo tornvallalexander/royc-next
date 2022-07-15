@@ -14,8 +14,12 @@ function Closed() {
       <H5 className="text-green-900 font-medium mb-3">Closed</H5>
       {res?.data?.closed?.map((fund, i) => (
         <FundOverview key={fund.name} fund={fund} index={i}>
-          <div className="flex justify-center items-center space-x-2">
-            <Badge color="orange" variant="filled">
+          <div className="flex justify-center items-center space-x-2 my-auto">
+            <Badge
+              className="hidden sm:inline-flex md:hidden lg:inline-flex"
+              color="orange"
+              variant="filled"
+            >
               Info
             </Badge>
             <LabeledValue label="Total fund" position="end">

@@ -59,7 +59,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     </div>
                   </Transition.Child>
                   <div className="flex-shrink-0 flex items-center px-4">
-                    <p className="text-4xl font-bold">ROYC</p>
+                    <p className="text-4xl font-bold tracking-[0.4em]">ROYC</p>
                   </div>
                   <div className="mt-5 flex-1 h-0 overflow-y-auto">
                     <nav className="px-2 space-y-1">
@@ -107,7 +107,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <MenuAlt2Icon className="h-6 w-6" aria-hidden="true" />
             </button>
             <div className="w-full px-4 flex justify-between items-center">
-              <p className="text-4xl font-bold my-auto">
+              <p className="text-4xl font-bold my-auto tracking-[0.4em]">
                 ROYC
               </p>
               <div className="flex">
