@@ -24,6 +24,9 @@ function LabeledValue(props: Props) {
       "flex-col": !reverse,
       "flex-col-reverse": reverse,
     })}>
+      <div className="items-end">
+        {/* adding this style so tailwind uses it (tailwind doesn't realize we use it dynamically) */}
+      </div>
       <Text
         className={clsx("font-bold", {
           "text-lg": size === "md",

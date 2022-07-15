@@ -3,11 +3,12 @@ import Layout from "components/layout";
 import { H3 } from "components/typography";
 import { Upcoming } from "containers/royc/upcoming";
 import { ClientCapitalDistributions } from "containers/royc/client-capital-distributions";
-import { PercentageMetrics } from "containers/royc/percentage-metrics";
 import { FourMetrics } from "containers/royc/four-metrics";
 import { Closed } from "containers/royc/closed";
 import { Ongoing } from "containers/royc/ongoing";
 import { SubscriptionProcess } from "containers/royc/subscription-process";
+import { ClientTargetAllocations } from "containers/royc/client-target-allocations";
+import { UnfundedCapitalCalls } from "containers/royc/unfunded-capital-calls";
 
 const Home: NextPage = () => {
   return (
@@ -29,7 +30,10 @@ const Home: NextPage = () => {
           </H3>
           <div className="space-y-6">
             <FourMetrics />
-            <PercentageMetrics />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <ClientTargetAllocations />
+              <UnfundedCapitalCalls />
+            </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <ClientCapitalDistributions />
               <SubscriptionProcess />

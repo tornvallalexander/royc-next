@@ -107,3 +107,35 @@ export const dashboardRouter = createRouter()
       }
     }
   })
+  .query("client-target-allocations", {
+    async resolve() {
+      return {
+        client_target_allocations: {
+          percentage: 0.14,
+          client_with_target: {
+            value: 43,
+            total: 61,
+          },
+          unallocated_capital: {
+            value: 9079000000,
+          }
+        }
+      }
+    }
+  })
+  .query("unfunded-capital-calls", {
+    async resolve() {
+      return {
+        unfunded_capital_calls: {
+          percentage: 0.59,
+          clients: {
+            value: 43,
+            total: 61,
+          },
+          unfunded_capital: {
+            value: 74000000,
+          }
+        },
+      }
+    }
+  })
