@@ -1,4 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
+import { prisma } from "../prisma/prisma";
 
 type CtxUser = {
   id: string;
@@ -17,7 +18,7 @@ function getUserFromCookie(req: NextApiRequest) {
 
   return {
     id: "123",
-    userId: "123",
+    userId: "cl5mrbvlx0006lwc9tjlighzy",
     email: "123@gmail.com",
     name: "123",
   } as CtxUser;
@@ -31,7 +32,7 @@ export function createContext({
   res: NextApiResponse,
 }) {
   const user = getUserFromCookie(req);
-  return { req, res, user }
+  return { req, res, user, prisma }
 }
 
 export type Context = ReturnType<typeof createContext>;

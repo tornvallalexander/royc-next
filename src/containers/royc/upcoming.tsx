@@ -15,7 +15,7 @@ function Upcoming() {
         <FundOverview key={fund.name} fund={fund} index={i}>
           <div className="space-y-1">
             <LabeledValue label="Total fund" position="end">
-              {currencyFormatter(fund.total_fund)}
+              {currencyFormatter(fund.totalFund)}
             </LabeledValue>
           </div>
         </FundOverview>

@@ -15,7 +15,7 @@ function Ongoing() {
         <FundOverview key={fund.name} fund={fund} index={i}>
           <div className="space-y-1">
             <LabeledValue label="Total fund" position="end">
-              {currencyFormatter(fund.total_fund)}
+              {currencyFormatter(fund.totalFund)}
             </LabeledValue>
             <LabeledValue label="Unallocated" position="end">
               {currencyFormatter(fund.unallocated)}

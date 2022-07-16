@@ -3,7 +3,7 @@ import type React from "react";
 type Fund = {
   name: string;
   type: string;
-  total_fund: number;
+  totalFund: number;
   unallocated: number;
   img: string;
 }

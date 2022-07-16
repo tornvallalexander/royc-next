@@ -23,7 +23,7 @@ function Closed() {
               Info
             </Badge>
             <LabeledValue label="Total fund" position="end">
-              {currencyFormatter(fund.total_fund)}
+              {currencyFormatter(fund.totalFund)}
             </LabeledValue>
           </div>
         </FundOverview>

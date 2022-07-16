@@ -28,82 +28,41 @@ export const dashboardRouter = createRouter()
     },
   })
   .query("ongoing", {
-    async resolve() {
+    async resolve({ ctx }) {
+      const ongoing = await ctx.prisma.fund.findMany({
+        where: {
+          status: "ongoing",
+          userId: ctx.user.userId,
+        }
+      })
       return {
-        ongoing: [
-          {
-            name: "Advent International",
-            type: "Private Equity",
-            total_fund: 200000000,
-            unallocated: 44600000,
-            img: "https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Advent_International_logo.svg/1200px-Advent_International_logo.svg.png",
-          },
-          {
-            name: "Advent International GPE X",
-            type: "Private Equity",
-            total_fund: 200000000,
-            unallocated: 44600000,
-            img: "https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Advent_International_logo.svg/1200px-Advent_International_logo.svg.png",
-          },
-        ],
+        ongoing,
       };
     }
   })
   .query("upcoming", {
-    async resolve() {
+    async resolve({ ctx }) {
+      const upcoming = await ctx.prisma.fund.findMany({
+        where: {
+          status: "upcoming",
+          userId: ctx.user.userId,
+        }
+      })
       return {
-        upcoming: [
-          {
-            name: "Insight Partners XII",
-            type: "Growth Equity",
-            total_fund: 250000000,
-            unallocated: 44600000,
-            img: "https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Advent_International_logo.svg/1200px-Advent_International_logo.svg.png",
-          },
-          {
-            name: "Brookfield Strategic Real Estate Partners VI",
-            type: "Real Estate private Equity",
-            total_fund: 200000000,
-            unallocated: 44600000,
-            img: "https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Advent_International_logo.svg/1200px-Advent_International_logo.svg.png",
-          },
-          {
-            name: "Advent International",
-            type: "Private Equity",
-            total_fund: 200000000,
-            unallocated: 44600000,
-            img: "https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Advent_International_logo.svg/1200px-Advent_International_logo.svg.png",
-          },
-        ]
+        upcoming,
       }
     }
   })
   .query("closed", {
-    async resolve() {
+    async resolve({ ctx }) {
+      const closed = await ctx.prisma.fund.findMany({
+        where: {
+          status: "closed",
+          userId: ctx.user.userId,
+        }
+      })
       return {
-        closed: [
-          {
-            name: "Insight Partners XII",
-            type: "Growth Equity",
-            total_fund: 250000000,
-            unallocated: 44600000,
-            img: "",
-          },
-          {
-            name: "Brookfield Strategic Real Estate Partners VI",
-            type: "Real Estate private Equity",
-            total_fund: 200000000,
-            unallocated: 44600000,
-            img: "",
-          },
-          {
-            name: "Advent International",
-            type: "Private Equity",
-            total_fund: 200000000,
-            unallocated: 44600000,
-            img: "",
-          },
-        ]
+        closed,
       }
     }
   })
