@@ -1,5 +1,6 @@
 import { createRouter } from "../createRouter";
 import { requireUser } from "../utils";
+import { z } from "zod";
 
 export const dashboardRouter = createRouter()
   .query("four-metrics", {
@@ -119,5 +120,19 @@ export const dashboardRouter = createRouter()
           },
         ]
       }
+    }
+  })
+  .mutation("delete-fund", {
+    input: z
+      .object({
+        fundId: z.string(),
+      })
+      .nullish(),
+    async resolve({ ctx, input }) {
+      await ctx.prisma.fund.delete({
+        where: {
+          id: input?.fundId ?? "cl5mrbvno0060lwc99fxq6fw8",
+        }
+      })
     }
   })
