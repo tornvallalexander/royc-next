@@ -4,14 +4,14 @@ import { Button, Select } from "@mantine/core";
 
 function DeleteFund() {
   const utils = trpc.useContext();
-  const res = trpc.useQuery(["dashboard.funds"]);
+  const res = trpc.useQuery(["fund.all"]);
 
-  const mutation = trpc.useMutation(["dashboard.delete-fund"], {
+  const mutation = trpc.useMutation(["fund.delete-by-id"], {
     onSuccess: () => {
-      void utils.invalidateQueries(["dashboard.funds"]);
-      void utils.invalidateQueries(["dashboard.ongoing"]);
-      void utils.invalidateQueries(["dashboard.closed"]);
-      void utils.invalidateQueries(["dashboard.upcoming"]);
+      void utils.invalidateQueries(["fund.all"]);
+      void utils.invalidateQueries(["fund.ongoing"]);
+      void utils.invalidateQueries(["fund.closed"]);
+      void utils.invalidateQueries(["fund.upcoming"]);
     }
   });
 

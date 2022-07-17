@@ -1,6 +1,4 @@
 import { createRouter } from "../createRouter";
-import { requireUser } from "../utils";
-import { z } from "zod";
 
 export const dashboardRouter = createRouter()
   .query("four-metrics", {
@@ -26,48 +24,6 @@ export const dashboardRouter = createRouter()
         ],
       };
     },
-  })
-  .query("ongoing", {
-    async resolve({ ctx }) {
-      requireUser(ctx, "UNAUTHORIZED");
-      const ongoing = await ctx.prisma.fund.findMany({
-        where: {
-          status: "ongoing",
-          userId: ctx.user.userId,
-        }
-      })
-      return {
-        ongoing,
-      };
-    }
-  })
-  .query("upcoming", {
-    async resolve({ ctx }) {
-      requireUser(ctx, "UNAUTHORIZED");
-      const upcoming = await ctx.prisma.fund.findMany({
-        where: {
-          status: "upcoming",
-          userId: ctx.user.userId,
-        }
-      })
-      return {
-        upcoming,
-      }
-    }
-  })
-  .query("closed", {
-    async resolve({ ctx }) {
-      requireUser(ctx, "UNAUTHORIZED");
-      const closed = await ctx.prisma.fund.findMany({
-        where: {
-          status: "closed",
-          userId: ctx.user.userId,
-        }
-      })
-      return {
-        closed,
-      }
-    }
   })
   .query("client-target-allocations", {
     async resolve() {
@@ -122,33 +78,5 @@ export const dashboardRouter = createRouter()
           },
         ]
       }
-    }
-  })
-  .query("funds", {
-    async resolve({ ctx }) {
-      requireUser(ctx, "UNAUTHORIZED");
-      const funds = await ctx.prisma.fund.findMany({
-        where: {
-          userId: ctx.user.userId,
-        }
-      })
-      return {
-        funds,
-      }
-    }
-  })
-  .mutation("delete-fund", {
-    input: z
-      .object({
-        fundId: z.string(),
-      })
-      .nullish(),
-    async resolve({ ctx, input }) {
-      requireUser(ctx, "UNAUTHORIZED");
-      await ctx.prisma.fund.delete({
-        where: {
-          id: input?.fundId ?? "cl5mrbvno0060lwc99fxq6fw8",
-        }
-      })
     }
   })

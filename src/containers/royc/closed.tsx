@@ -8,7 +8,7 @@ import { trpc } from "utils/trpc";
 import { Badge } from "@mantine/core";
 
 function Closed() {
-  const res = trpc.useQuery(["dashboard.closed"]);
+  const res = trpc.useQuery(["fund.closed"]);
   return (
     <Card>
       <H5 className="text-green-900 font-medium mb-3">Closed</H5>

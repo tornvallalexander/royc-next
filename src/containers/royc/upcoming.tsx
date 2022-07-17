@@ -7,7 +7,7 @@ import { currencyFormatter } from "utils/misc";
 import { trpc } from "utils/trpc";
 
 function Upcoming() {
-  const res = trpc.useQuery(["dashboard.upcoming"]);
+  const res = trpc.useQuery(["fund.upcoming"]);
   return (
     <Card>
       <H5 className="text-green-900 font-medium mb-3">Upcoming</H5>
