@@ -18,7 +18,7 @@ function getUserFromCookie(req: NextApiRequest) {
 
   return {
     id: "123",
-    userId: "cl5mrbvlx0006lwc9tjlighzy",
+    userId: "cl5ovrba40006we6fy8bngkcy",
     email: "123@gmail.com",
     name: "123",
   } as CtxUser;

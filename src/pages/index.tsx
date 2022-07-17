@@ -9,6 +9,7 @@ import { Ongoing } from "containers/royc/ongoing";
 import { SubscriptionProcess } from "containers/royc/subscription-process";
 import { ClientTargetAllocations } from "containers/royc/client-target-allocations";
 import { UnfundedCapitalCalls } from "containers/royc/unfunded-capital-calls";
+// import { DeleteFund } from "containers/royc/delete-fund";
 
 const Home: NextPage = () => {
   return (
@@ -39,6 +40,7 @@ const Home: NextPage = () => {
               <SubscriptionProcess />
             </div>
           </div>
+          {/* <DeleteFund /> */}
         </section>
       </div>
     </Layout>
