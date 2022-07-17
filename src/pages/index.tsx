@@ -9,6 +9,7 @@ import { Ongoing } from "containers/royc/ongoing";
 import { SubscriptionProcess } from "containers/royc/subscription-process";
 import { ClientTargetAllocations } from "containers/royc/client-target-allocations";
 import { UnfundedCapitalCalls } from "containers/royc/unfunded-capital-calls";
+import { Insights } from "containers/royc/insights";
 // import { DeleteFund } from "containers/royc/delete-fund";
 
 const Home: NextPage = () => {
@@ -42,7 +43,23 @@ const Home: NextPage = () => {
           </div>
           {/* <DeleteFund /> */}
         </section>
+        <section className="hidden 2xl:block">
+          <H3 className="mb-6">
+            Updates and insights
+          </H3>
+          <div className="space-y-6">
+            <Insights />
+          </div>
+        </section>
       </div>
+      <section className="2xl:hidden mt-10">
+        <H3 className="mb-6">
+          Updates and insights
+        </H3>
+        <div className="space-y-6">
+          <Insights />
+        </div>
+      </section>
     </Layout>
   )
 }
