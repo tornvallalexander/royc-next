@@ -14,7 +14,7 @@ function MenuIconLink(props: Props) {
   } = props;
 
   const location = useLocation();
-  const isSelected = location?.pathname?.includes(to);
+  const isSelected = location?.pathname?.includes(to) || location?.pathname === to;
 
   return (
     <Link

@@ -7,7 +7,7 @@ import { LabeledValue } from "components/labeled-value";
 import { currencyFormatter } from "utils/misc";
 
 function ClientTargetAllocations() {
-  const res = trpc.useQuery(["dashboard.client-target-allocations"]);
+  const res = trpc.useQuery(["client.target-allocations"]);
 
   if (typeof res?.data?.client_target_allocations !== "object") {
     return null;

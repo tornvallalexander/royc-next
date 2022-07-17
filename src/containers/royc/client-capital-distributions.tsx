@@ -6,7 +6,7 @@ import { Progress } from "@mantine/core";
 import { trpc } from "utils/trpc";
 
 function ClientCapitalDistributions() {
-  const res = trpc.useQuery(["dashboard.distributions"]);
+  const res = trpc.useQuery(["client.distributions"]);
   return (
     <Card>
       <H4 className="mb-4">

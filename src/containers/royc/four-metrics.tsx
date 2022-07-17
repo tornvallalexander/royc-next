@@ -5,7 +5,7 @@ import { currencyFormatter } from "utils/misc";
 import { trpc } from "utils/trpc";
 
 function FourMetrics() {
-  const res = trpc.useQuery(["dashboard.four-metrics"]);
+  const res = trpc.useQuery(["client.four-metrics"]);
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
       {res?.data?.metrics?.map(({ name, value }) => {

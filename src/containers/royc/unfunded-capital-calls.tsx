@@ -7,7 +7,7 @@ import { LabeledValue } from "components/labeled-value";
 import { currencyFormatter } from "utils/misc";
 
 function UnfundedCapitalCalls() {
-  const res = trpc.useQuery(["dashboard.unfunded-capital-calls"]);
+  const res = trpc.useQuery(["client.unfunded-capital-calls"]);
 
   if (typeof res?.data?.unfunded_capital_calls !== "object") {
     return null;

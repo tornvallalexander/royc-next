@@ -1,6 +1,6 @@
 import { createRouter } from "../createRouter";
 
-export const dashboardRouter = createRouter()
+export const clientRouter = createRouter()
   .query("four-metrics", {
     resolve: async () => {
       return {
@@ -25,7 +25,7 @@ export const dashboardRouter = createRouter()
       };
     },
   })
-  .query("client-target-allocations", {
+  .query("target-allocations", {
     async resolve() {
       return {
         client_target_allocations: {
