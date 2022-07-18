@@ -100,7 +100,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="sticky top-0 z-10 flex-shrink-0 flex h-16 bg-white shadow-lg">
             <button
               type="button"
-              className="px-4 border-r border-gray-200 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 md:hidden"
+              className="px-4 border-r border-gray-200 text-gray-500 focus:outline-none md:hidden"
               onClick={() => setSidebarOpen(true)}
             >
               <span className="sr-only">Open sidebar</span>
