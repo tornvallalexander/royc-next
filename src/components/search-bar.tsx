@@ -4,7 +4,7 @@ import { TextInput } from "@mantine/core";
 
 function SearchBar() {
   return (
-    <div className="ml-3">
+    <div className="w-full ml-3">
       <TextInput
         classNames={{
           input: "bg-gray-100 rounded-lg",

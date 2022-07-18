@@ -106,14 +106,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <span className="sr-only">Open sidebar</span>
               <MenuAlt2Icon className="h-6 w-6" aria-hidden="true" />
             </button>
-            <div className="w-full px-4 flex justify-between items-center">
-              <p className="text-4xl font-bold my-auto tracking-[0.4em]">
+            <div className="w-full px-4 sm:flex sm:justify-between sm:items-center my-auto">
+              <p className="hidden sm:inline-flex text-4xl font-bold my-auto tracking-[0.4em]">
                 ROYC
               </p>
               <div className="flex">
-                <form className="flex md:ml-0" action="src/components/layout/index#" method="GET">
-                  <SearchBar />
-                </form>
+                <SearchBar />
               </div>
             </div>
           </div>
