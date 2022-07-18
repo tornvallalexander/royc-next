@@ -55,21 +55,19 @@ const insights = [
 
 function Insights() {
   return (
-    <div className="">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {insights.map(insight => {
-          return (
-            <Insight key={insight.title} insight={insight} />
-          )
-        })}
-      </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {insights.map(insight => {
+        return (
+          <Insight key={insight.title} insight={insight} />
+        )
+      })}
     </div>
   )
 }
 
 function Insight({ insight }: { insight: any }) {
   return (
-    <div className="w-full">
+    <div className="cursor-pointer">
       <div className="rounded-xl max-w-[600px]">
         <Image
           src="https://ychef.files.bbci.co.uk/976x549/p0202jwh.jpg"
